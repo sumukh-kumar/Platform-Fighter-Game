@@ -11,5 +11,21 @@ config_version=5
 [application]
 
 config/name="Platformer_Fighting_Game"
+run/main_scene="res://Stages/test_stage.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/window_width_override=720
+window/size/window_height_override=480
+
+[layer_names]
+
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Walls"
+2d_physics/layer_3="Platforms"
+2d_physics/layer_4="Ledge"
+2d_physics/layer_5="Blastzone"

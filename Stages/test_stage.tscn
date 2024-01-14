@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://do1hob6ktxocg"]
+
+[ext_resource type="Texture2D" uid="uid://c5ygjdvqmcvha" path="res://Stages/Template1/1.png" id="1_aemv3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_443bb"]
+size = Vector2(963.75, 39.5)
+
+[node name="Test stage" type="Node2D"]
+
+[node name="Template_pic" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_aemv3")
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(-762, -520)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(763.375, 750.45)
+shape = SubResource("RectangleShape2D_443bb")
+
+[node name="Label" type="Label" parent="Floor"]
+offset_left = 690.0
+offset_top = 733.0
+offset_right = 730.0
+offset_bottom = 759.0
+text = "Floor"
+metadata/_edit_use_anchors_ = true
+
+[node name="Wall" type="StaticBody2D" parent="."]
+position = Vector2(-762, -520)
+collision_layer = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall"]
+position = Vector2(0.5, 8.20001)
+polygon = PackedVector2Array(731, 767, 280, 764, 340, 820, 422, 858, 1103, 857, 1189, 818, 1245, 764)
+
+[node name="Label" type="Label" parent="Wall"]
+offset_left = 674.0
+offset_top = 805.0
+offset_right = 714.0
+offset_bottom = 828.0
+text = "Wall"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.567, 0.567)
+limit_left = -1140
+limit_top = -710
+limit_right = 1150
+limit_bottom = 550
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.0
+drag_right_margin = 0.0
+editor_draw_limits = true
+editor_draw_drag_margin = true
